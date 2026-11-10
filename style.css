@@ -9,6 +9,7 @@
     --cor-paresTabela:#F3F6FB;
     --cor-cartao:#ffffff;
     --cor-cabecalhoTabela:#EAF3FF;
+    --cor-status_ativo:#3cbd38;
 }
 *{
     box-sizing: border-box;
@@ -31,11 +32,11 @@ body {
     padding-top: 10px;
     background-color: var(--cor-primaria);
     flex-direction: column;
-    width: auto;
+    width: 247px;
     height: 100vh;
     box-sizing: border-box;
-    min-width: 266px;
-    max-width: 300px;
+    min-width: 247px;
+    flex-shrink: 0;
     justify-content: space-between;
 }
 .menu_navegacao{ /*controla espaçamento dacoluna*/
@@ -133,7 +134,7 @@ body {
 .cartao_historico {
     background-color:var(--cor-cartao);
     height: 505px;
-    border-radius: 5px;
+    border-radius: 15px;
     padding: 12px;
 }
 .cartao_historico h2 {
@@ -142,10 +143,8 @@ body {
 }
 /* tabela stilização*/
 table{
-    width: 1050px;
-}
-tbody tr {
-
+    width: 100%;
+    border-collapse: collapse;
 }
 tbody tr:nth-child(even) {
     background-color: var(--cor-cartao);
@@ -156,20 +155,63 @@ tbody tr:nth-child(odd) {
     background-color:var(--cor-paresTabela);
     
 }
-tbody td {
+tbody td {  /*registros clienta...situação*/
+    color: var(--cor-cardInput);
     padding: 24px;
     text-align: center;
+    font-family: "inter", sans-serif;
+    font-size: 13px;
+    border:none;
+}
+
+tbody th{    /*fonte registros*/
+    color:var(--cor-primaria);
+    font-family: 'inter',sans-serif;
+    font-weight: 700;
+    border:none;
 }
 thead th{
     background-color: var(--cor-cabecalhoTabela);
     height: 54px;
-    font-family: "inter";
+    font-family: "inter",sans-serif;
     font-weight: 700;
-    
+    border: none;
 }
+    tbody td {  /*registros clienta...situação*/
+    color: var(--cor-cardInput);
+    padding: 24px;
+    text-align: center;
+    font-family: "inter", sans-serif;
+    font-size: 13px;
+}
+
+tbody th{    /*fonte registros*/
+    color:var(--cor-primaria);
+    font-family: 'inter', sans-serif;
+    font-weight: 700px;
+    border:none;
+}
+    
+
 thead th:last-child {
     border-top-right-radius: 10px;
 }
 thead th:first-child{
     border-top-left-radius: 10px;
+}
+/*na tela cliente status_ativo*/
+.status_ativo {
+    background-color: var(--cor-status_ativo);
+    border-radius: 15px;
+    padding: 5px 12px;
+    color: var(--cor-cartao);
+}
+.status_inativo {
+    background-color:var(--cor-text);
+    border-radius: 15px;
+    padding: 5px 12px;
+    color: var(--cor-cartao);
+}
+.cartao_clientes h2 {
+    font-family: 'inter', sans-serif;
 }
