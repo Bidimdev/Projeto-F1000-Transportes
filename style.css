@@ -86,6 +86,7 @@ body {
 .cartao_suporte h1 {
     color:var(--cor-segundaria);
     font-size: 12px;
+    
 }
 .cartao_suporte p{
     font-size: 12px;
